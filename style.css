@@ -1,29 +1,58 @@
+/*
+DC143C
+F75270
+F7CAC9
+FDEBD0
+*/
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: #101010;
+    background-color: #FDEBD0;
+    font-family: 'eknfont';
+}
+
+@font-face {
+    font-family: 'eknfont';
+    src: url(Fonts/steph-font.ttf);
+}
+
+@font-face {
+    font-family: 'ekbfont';
+    src: url(Fonts/steph-font-bold.ttf);
 }
 
 .navbar{
     display: flex;
-    background-color: #202020;
+    background-color: #F75270;
     height: 80px;
     align-items: center;
     position: fixed;
     width: 100%;
     z-index: 1000;
     top: 0;
+    font-family: 'ekbfont';
 }
 
 .logo{
     margin-right: auto;
     text-decoration: none;
     margin-left: 50px;
-    color: #f8f9fa;
+    color: #DC143C;
     font-size: 30px;
+    background-color: #f8f9fa;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-parts{
@@ -39,12 +68,12 @@ body{
 
 .nav-parts a{
     text-decoration: none;
-    color: #f8f9fa;
+    color: #DC143C;
     font-size: 20px;
 }
 
 .nav-part{
-    background-color: #4CAF50;
+    background-color: #f8f9fa;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
     margin-left: 5px;
@@ -56,9 +85,11 @@ body{
     padding-right: 15px;
 }
 
-.a-sec{
-    margin-top: 130px;
+#a-sec{
+    padding-top: 130px;
+    padding-bottom: 130px;
     color: #f8f9fa;
+    background-color: #FDEBD0;
 }
 .img-box{
     display: flex;
@@ -68,6 +99,9 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    font-family: 'eknfont';
+    font-size: 25px;
+    color: #DC143C;
 }
 
 .my-img{
@@ -79,7 +113,7 @@ body{
     margin-bottom: 50px;
 }
 
-.a-sec img{
+#a-sec img{
     height: 700px;
     position: relative;
     left: 40px;
@@ -88,9 +122,10 @@ body{
     transition-duration: 0.5s;
 }
 
-img:hover{
+#a-sec img:hover{
     scale: 1.8;
 }
+
 
 .intro-box{
     width: 100%;
@@ -100,4 +135,61 @@ img:hover{
 
 .intro{
     width: 1200px;
+    font-size: 30px;
+    color: #F75270;
+}
+
+#s-sec{
+    padding-bottom: 130px;
+    padding-top: 130px;
+}
+
+.sk{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'eknfont';
+    font-size: 25px;
+    color: #DC143C;
+    margin-bottom: 50px;
+}
+
+.sapps{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: #F75270;
+}
+
+.pro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: #DC143C;
+    margin-bottom: 25px;
+}
+
+.p-box{
+    display: flex;
+    justify-content: center;
+}
+
+.web-card{
+    border: solid red;
+    height: 350px;
+    width: 230px;
+    padding: 10px;
+    background-color: #f9f8fa;
+}
+
+.web-card img{
+    width:230px;
+    margin-bottom: 15px;
+}
+
+.web-card h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
