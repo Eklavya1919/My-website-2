@@ -280,22 +280,25 @@ body{
         width: 600px;
     }
 
-    .nav-parts{
-        display: none;
-    }
-
-    .nav-parts{
-        display: inline;
-    }
-
     .bar{
-        display: inline;
+        display: block;
         margin-right: 20px;
     }
 
-    .bar:active{
-        .nav-parts{
-            display: inline;
-        }
+    .nav-parts {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #F75270; 
+    }   
+
+    .nav-part{
+        width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
     }
 }
