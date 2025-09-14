@@ -11,23 +11,21 @@
     <div class="nav-box">
         <nav class="navbar">
             <a href="#" class="logo"><div>Eklavya</div></a>
-            <div class="bar"><i class="fa-solid fa-bars"></i></div>
             <ul class="nav-parts">
-                <div class="nav-part"><a href="#"><li>About</li></a></div>
-                <div class="nav-part"><a href="#p-sec"><li>Projects</li></a></div>
-                <div class="nav-part"><a href="#s-sec"><li>Skills</li></a></div>
-                <div class="nav-part"><a href="#c-sec"><li>Contact</li></a></div>
+                <li class="nav-part"><a href="#">About</a></li>
+                <li class="nav-part"><a href="#p-sec">Projects</a></li>
+                <li class="nav-part"><a href="#s-sec">Skills</a></li>
+                <li class="nav-part"><a href="#c-sec">Contact</a></li>
             </ul>
+            <div class="bar" onclick="showsidebar()"><i class="fa-solid fa-bars"></i></div>
         </nav>
     </div>
 
     <section id="a-sec">
         <div class="greet"><h1>Hey buddies, I'm Eklavya!</h1></div>
-        
-            <div class="my-img">
-                <img src="Eklavya.JPG"  alt="">
-            </div>
-       
+        <div class="my-img">
+            <img src="Eklavya.JPG" alt="A photo of Eklavya">
+        </div>
         <div class="intro-box">
             <div class="intro">
                 <p>Hey! I'm Eklavya, a student at VIT bhopal who's incredibly excited about software development and UX design. with a background in computer science, I'm well equipped with a technical skillset and an eagerness to experiment! Outside of career and academics, I enjoy playing volleyball, making videos, watching anime, and lifting weights!</p>
@@ -36,13 +34,10 @@
     </section>
 
     <section id="p-sec">
-        <div class="pro">
-            <h1>Project</h1>
-        </div>
-
+        <div class="pro"><h1>Project</h1></div>
         <div class="p-box">
             <div class="web-card">
-                <img src="My web.png" alt="">
+                <img src="My web.png" alt="Screenshot of portfolio website">
                 <div><h2>Portfolio Website</h2></div>
                 <div class="p">
                     <p>Welcome to my website! I built this portfolio to showcase my web development and design skills, with the custom, handwritten font.</p>
@@ -52,28 +47,44 @@
     </section>
 
     <section id="s-sec">
-        <div class="sk">
-            <h1>Skills</h1>
-        </div>
+        <div class="sk"><h1>Skills</h1></div>
         <div class="sapps">
             <i class="fa-brands fa-python"></i>
             <i class="fa-brands fa-java"></i>
             <i class="fa-brands fa-js"></i>
             <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css"></i>
-        </div>        
+            <i class="fa-brands fa-css3-alt"></i> </div>
     </section>
 
     <section id="c-sec">
-        <div class="c">
-            <h1>Contact</h1>
-        </div>
-        <div class="cp">
-            <p>Coming soon!</p>
-        </div>
+        <div class="c"><h1>Contact</h1></div>
+        <div class="cp"><p>Coming soon!</p></div>
     </section>
 
+    <script>
+    function showsidebar() {
+        const navparts = document.querySelector('.nav-parts');
+        navparts.classList.toggle('show');
+    }
 
-    <script src="script.js"></script>
+// Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const navparts = document.querySelector('.nav-parts');
+        const bar = document.querySelector('.bar');
+
+        if (navparts.classList.contains('show') && 
+            !navparts.contains(event.target) &&
+            !bar.contains(event.target)) {
+            navparts.classList.remove('show');
+        }
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-parts a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-parts').classList.remove('show');
+        });
+    });
+    </script>
 </body>
 </html>

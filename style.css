@@ -20,7 +20,7 @@ body{
 
 @font-face {
     font-family: 'eknfont';
-    src: url(Fonts/steph-font.ttf);
+    src: url(Fonts/Efont-Regular.ttf);
 }
 
 @font-face {
@@ -96,7 +96,6 @@ body{
 #a-sec{
     padding-top: 130px;
     padding-bottom: 130px;
-    /* color: #f8f9fa; */
     background-color: #FDEBD0;
 }
 
@@ -129,6 +128,7 @@ body{
   border-radius: 50%;
 }
 
+
 #a-sec img{
    align-items: center;
    justify-content: center;
@@ -139,7 +139,7 @@ body{
 }
 
 #a-sec img:hover{
-    scale: 1.4;
+    transform: scale(1.4);
 }
 
 
@@ -196,6 +196,11 @@ body{
     margin-bottom: 25px;
 }
 
+#p-sec{
+    padding-bottom: 130px;
+    padding-top: 130px;    
+}
+
 .p-box{
     display: flex;
     justify-content: center;
@@ -245,60 +250,45 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
 @media (max-width:600px) {
-    .greet{
+    .greet {
         font-size: 20px;
     }
-    .img-box{
-        width: auto;
-        height: auto;
-    }
-    .my-img{
+    .my-img {
         position: relative;
         height: 200px;
         width: 200px;
     }
-
-
-    .logo{
+    .logo {
         margin-left: 20px;
     }
-
-    .intro{
+    .intro {
         padding: 25px;
     }
-
-    .nav-box{
-        width: 600px;
+    .nav-box {
+        width: 100%;
     }
-
-    .bar{
+    .bar {
         display: block;
         margin-right: 20px;
     }
-
     .nav-parts {
-        display: none; 
+        display: none;
         flex-direction: column;
         width: 100%;
         position: absolute;
         top: 80px;
         left: 0;
-        background-color: #F75270; 
-    }   
-
-    .nav-part{
+        background-color: #F75270;
+    }
+    .nav-parts.show {
+        display: flex;
+    }
+    .nav-part {
         width: 80px;
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 5px;
+    }
+    .nav-parts li{
+        margin-left: auto;
     }
 }
