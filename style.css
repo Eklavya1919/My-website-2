@@ -153,6 +153,27 @@ body{
     width: 1200px;
     font-size: 30px;
     color: #F75270;
+    text-align: center;
+}
+
+.apps{
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.apps a{
+    text-decoration: none;
+    color: #ef233c;
+
+    font-size: 40px;
+    transition-duration: 0.3s;
+    margin-left: 20px;
+}
+
+.apps a:hover{
+    transform: scale(1.2);
+    color: #F75270;
 }
 
 #s-sec{
@@ -193,7 +214,7 @@ body{
     justify-content: center;
     font-size: 25px;
     color: #DC143C;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 #p-sec{
@@ -212,11 +233,14 @@ body{
     width: 245px;
     padding: 10px;
     background-color: #f9f8fa;
+    box-shadow: 15px 15px 50px 2px black;
+    border-radius: 2rem;
 }
 
 .web-card img{
     width: 245px;
     margin-bottom: 15px;
+    border-radius: 2rem;
 }
 
 .web-card h2{
@@ -264,6 +288,7 @@ body{
     }
     .intro {
         padding: 25px;
+        text-align: center;
     }
     .nav-box {
         width: 100%;
